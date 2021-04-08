@@ -7,7 +7,7 @@ describe("User can see list of projects", () => {
   it("displays the first project", () => {
     cy.get("#project-1").within(() => {
       cy.get(".image").should("exist");
-      cy.get(".header").should("contain", "My first Website");
+      cy.get(".header").should("contain", "My First Website");
       cy.get(".description").should("contain", "This was my first project.");
     });
   });
@@ -15,16 +15,16 @@ describe("User can see list of projects", () => {
   it("displays the second project", () => {
     cy.get("#project-2").within(() => {
       cy.get(".image").should("exist");
-      cy.get(".header").should("contain", "FizzBuzz");
-      cy.get(".description").should("contain", "Making ruby backend application is fun.");
+      cy.get(".header").should("contain", "RvR");
+      cy.get(".description").should("contain", "A Little simple ruby fighting game im currently working on the spare time.");
     });
   });
 
   it("displays the third project", () => {
     cy.get("#project-3").within(() => {
       cy.get(".image").should("exist");
-      cy.get(".header").should("contain", "Mobile UX");
-      cy.get(".description").should("contain", "I like to design for the mobile platform.");
+      cy.get(".header").should("contain", "Library Challenge");
+      cy.get(".description").should("contain", "This was our first challenge in the bootcamp.");
     });
   });
 });
