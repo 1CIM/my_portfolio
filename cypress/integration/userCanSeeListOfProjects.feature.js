@@ -8,7 +8,7 @@ describe("User can see list of projects", () => {
     cy.get("#project-1").within(() => {
       cy.get(".image").should("exist");
       cy.get(".header").should("contain", "My First Website");
-      cy.get(".description").should("contain", "This was my first project.");
+      cy.get(".description").should("contain", "This was my first project. Just put a random pic here to see if there will be a match made in 'cloud'.");
     });
   });
 
