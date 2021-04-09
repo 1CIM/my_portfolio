@@ -53,8 +53,8 @@ describe("User can navigate to the app", () => {
       cy.get("#header").click();
     });
 
-    it("displays Hello World", () => {
-      cy.get("#hello").should("contain", "Hello");
+    it("displays background image", () => {
+      cy.get("#background").should("exist");
     });
 
     it("displays correct URL", () => {

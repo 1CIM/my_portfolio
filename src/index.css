@@ -19,12 +19,29 @@ footer {
   height: 60px;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #f5f5f5;
+  background-color: #fafafa;
   margin-top: 0;
   margin-bottom: 0;
   text-align: center;
+  opacity: 30%;
 }
 
 .container {
   margin-top: 4em;
+}
+
+#background {
+  background-size: cover;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  margin-top: -123px;
+  z-index: -1;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.bg-container {
+  width: 100vw;
+  height: 100vh;
 }
