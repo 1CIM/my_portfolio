@@ -5,7 +5,7 @@ describe("User can navigate to cv and see content", () => {
   });
   
   it("displays components name in URL", () => {
-    cy.url().should("contain", "CV")
+    cy.url().should("contain", "cv")
   });
 
   it("displays cv header", () => {
@@ -14,7 +14,7 @@ describe("User can navigate to cv and see content", () => {
 
   it("displays job experiences", () => {
     cy.get("[data-cy=job-xp]")
-    .should("contain", "Thin Smith, Bartender, Waiter");
+    .should("contain", "Tinsmith, Bartender, Waiter");
   });
 
   it("displays previous education", () => {

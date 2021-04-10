@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Container, Grid, Image } from "semantic-ui-react";
-import ProjectCard from './ProjectCard';
+import ProjectCard from "./ProjectCard";
 import axios from "axios";
 
 class Projects extends Component {
