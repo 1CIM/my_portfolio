@@ -27,6 +27,13 @@ const Header = () => {
         to={{ pathname: "/projects" }}
         data-cy="projects-tab"
         />
+        <Menu.Item
+        id="cv-tab"
+        name="my CV"
+        as={NavLink}
+        to={{ pathname: "/cv" }}
+        data-cy="cv-tab"
+        />
       </Menu>
     </Segment>
   );
