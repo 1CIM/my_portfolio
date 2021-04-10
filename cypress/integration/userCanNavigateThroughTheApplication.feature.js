@@ -16,6 +16,18 @@ describe("User can navigate to the app", () => {
       cy.url().should("contain", "about");
     });
 
+    it("displays background image", () => {
+      cy.get("[data-cy=about-bg]").should("exist");
+    });
+
+    it("don't displays home background image", () => {
+      cy.get("[data-cy=home-bg]").should("not.exist");
+    });
+
+    it("don't displays projects background image", () => {
+      cy.get("[data-cy=projects-bg]").should("not.exist");
+    });
+
     it("dose not display My Projects header", () => {
       cy.get("[data-cy=projects-header]").should("not.exist");
     });
@@ -38,6 +50,18 @@ describe("User can navigate to the app", () => {
       cy.url().should("contain", "projects");
     });
 
+    it("displays background image", () => {
+      cy.get("[data-cy=projects-bg]").should("exist");
+    });
+
+    it("don't displays about tabs background image", () => {
+      cy.get("[data-cy=about-bg]").should("not.exist");
+    });
+
+    it("don't displays home tabs background image", () => {
+      cy.get("[data-cy=home-bg]").should("not.exist");
+    });
+
     it("dose not display My Projects header", () => {
       cy.get("[data-cy=about-header]").should("not.exist");
     });
@@ -54,13 +78,21 @@ describe("User can navigate to the app", () => {
     });
 
     it("displays background image", () => {
-      cy.get("[data-cy=bg-container]").should("exist");
+      cy.get("[data-cy=home-bg]").should("exist");
     });
 
     it("displays correct URL", () => {
       cy.url()
         .should("not.contain", "projects")
         .and("not.contain", "about");
+    });
+
+    it("don't displays about background image", () => {
+      cy.get("[data-cy=about-bg]").should("not.exist");
+    });
+
+    it("don't displays projects background image", () => {
+      cy.get("[data-cy=projects-bg]").should("not.exist");
     });
 
     it("dose not display About Me header", () => {
