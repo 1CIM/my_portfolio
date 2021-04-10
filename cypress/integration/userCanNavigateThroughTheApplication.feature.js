@@ -50,7 +50,7 @@ describe("User can navigate to the app", () => {
   describe("back to My Portfolio/Hello tab and it", () => {
     beforeEach(() => {
       cy.get("[data-cy=about-tab]").click();
-      cy.get("[data-cy=bg-container]").click();
+      cy.get("[data-cy=header]").click();
     });
 
     it("displays background image", () => {
