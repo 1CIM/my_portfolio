@@ -71,6 +71,16 @@ describe("User can navigate to the app", () => {
     });
   });
 
+  describe("to CV tab and it", () => {
+    beforeEach(() => {
+      cy.get("[data-cy=cv-tab]").click();
+    });
+
+    it("displays cv header", () => {
+      cy.get("[data-cy=cv-header]").should("contain", "CV");
+    });
+  });
+
   describe("back to My Portfolio/Hello tab and it", () => {
     beforeEach(() => {
       cy.get("[data-cy=about-tab]").click();
