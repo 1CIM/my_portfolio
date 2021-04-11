@@ -20,6 +20,10 @@ describe("User can navigate to the app", () => {
       cy.get("[data-cy=about-bg]").should("exist");
     });
 
+    it("displays the typewriter", () => {
+      cy.get("[data-cy=type-about]").should("exist")
+    })
+
     it("don't displays home background image", () => {
       cy.get("[data-cy=home-bg]").should("not.exist");
     });
@@ -86,6 +90,10 @@ describe("User can navigate to the app", () => {
         .should("not.contain", "projects")
         .and("not.contain", "about");
     });
+
+    it("displays the typewriter", () => {
+      cy.get("[data-cy=type-home]").should("exist")
+    })
 
     it("don't displays about background image", () => {
       cy.get("[data-cy=about-bg]").should("not.exist");
