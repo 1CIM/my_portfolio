@@ -23,11 +23,7 @@ describe("User can navigate to contact form and use it", () => {
       cy.get("[data-cy=email-input]").type("kim.haaga@live.se");
       cy.get("[data-cy=msg-input]").type("Hello World");
       cy.get("[data-cy=submit-btn]").click();
-    });
-
-    it("displays success message", () => {
-      cy.get("[cy.get=submit-success]")
-      .should("contain", "Thanks for your message!");
+      cy.window().should("have.property", "alert")
     });
   });
 });
