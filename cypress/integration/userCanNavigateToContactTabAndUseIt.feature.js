@@ -16,6 +16,10 @@ describe("User can navigate to contact form and use it", () => {
     cy.get("[data-cy=contact-form]").should("exist")
   });
 
+  it("displays contacts background image", () => {
+    cy.get("[data-cy=contact-bg]").should("exist");
+  });
+
   describe("User can send message", () => {
 
     it("test the contact inputs", () => {
@@ -23,7 +27,7 @@ describe("User can navigate to contact form and use it", () => {
       cy.get("[data-cy=email-input]").type("kim.haaga@live.se");
       cy.get("[data-cy=msg-input]").type("Hello World");
       cy.get("[data-cy=submit-btn]").click();
-      cy.window().should("have.property", "alert")
+      cy.window().should("have.property", "alert");
     });
   });
 });
