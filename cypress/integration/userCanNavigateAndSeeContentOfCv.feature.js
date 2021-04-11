@@ -5,7 +5,7 @@ describe("User can navigate to cv and see content", () => {
   });
   
   it("displays components name in URL", () => {
-    cy.url().should("contain", "cv")
+    cy.url().should("contain", "cv");
   });
 
   it("displays cv header", () => {
